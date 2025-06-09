@@ -2,22 +2,35 @@ import React from "react";
 // styling -> html + css file
 // import styles from "./Navbar.module.css";
 
-const Navbar = (props) => {
+// const Navbar = (props) => {
 
-  console.log(props)
+  // destructuring direct from props
+  const Navbar = ({ appTitle }) => {
+    // const object1 = {
+    //   name:"Monday",
+    //   topic: "Why Monday"
+    // }
 
-  console.log(props.nameX)
+    // console.log(object1.name);
 
-  return (
-    // <div className={styles.navContainer}>
-    <div className="bg-gray-800 text-white text-lg flex justify-center gap-5 p-4">
-      <p>{props.nameX}</p>
-      <p className="">Home</p>
-      <p className="">Todo</p>
-      <p className="">About</p>
-    </div>
-  );
-};
+    // // destructuring
+
+    // const {name} = object1;
+    // console.log(name);
+
+    // destructure from props
+    // const {appTitle} = props
+
+    return (
+      // <div className={styles.navContainer}>
+      <div className="bg-gray-800 text-white text-lg flex justify-center gap-5 p-4">
+        <p>{appTitle}</p>
+        <p className="">Home</p>
+        <p className="">Todo</p>
+        <p className="">About</p>
+      </div>
+    );
+  };
 
 export default Navbar;
 

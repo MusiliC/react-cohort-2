@@ -23,10 +23,12 @@ const App = () => {
 
   const todo3 = "Reading novel"
 
+  const isComplete = false;
+
   return (
     <div>
-      <Navbar nameX={applicationName} nameY={prop2} />
-      <TodoList newTodo="Reading novel" newTodo2 = "Going to supermarket" />
+      <Navbar appTitle={applicationName} nameY={prop2} />
+      <TodoList newTodo={todo3} newTodo2="Going to supermarket" isComplete = {isComplete} />
     </div>
   );
 };
