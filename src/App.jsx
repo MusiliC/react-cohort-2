@@ -1,34 +1,38 @@
-// Expressions and variables
-// {{}} -> Are used to enter in javascript 'world'
-// jsx -> rendering htm inside javascript
-// rafce -> 
-// comments
-// first component
-// conditional rendering
-
-
-import TodoList from "./components/TodoList";
 import Navbar from "./navbar/Navbar";
+import TodoListApp from "./views/TodoListApp";
 
-// styling
-//! external
-// internal
-// inline
+// Todo -> Refactor App
+// Todo -> components folder -> TodoItem, TodoList
+// Todo -> container/views -> TodoApp.js
+// Todo -> TodoList -> contains a map iterating todoItem
+// Todo -> todoItem -> completed -> different styling
+// TodoApp ->   const [filter, setFilter] = useState('all'); // <- NEW
+// const filteredTodos = todos.filter((todo) => {
+//   if (filter === "active") return !todo.completed;
+//   if (filter === "completed") return todo.completed;
+//   return true;
+// });
+{
+  /* <div className="filter-group">
+<button onClick={() => setFilter('all')} className={filter === 'all' ? 'active' : ''}>All</button>
+<button onClick={() => setFilter('active')} className={filter === 'active' ? 'active' : ''}>Active</button>
+<button onClick={() => setFilter('completed')} className={filter === 'completed' ? 'active' : ''}>Completed</button>
+</div>
+
+<TodoList
+todos={filteredTodos}
+onToggle={handleToggle}
+onDelete={handleDelete}
+/> */
+}
 
 const App = () => {
-
-  const applicationName = "Todo List App"
-
-  const prop2 = "Prop 2"
-
-  const todo3 = "Reading novel"
-
-  const isComplete = false;
-
   return (
     <div>
-      <Navbar appTitle={applicationName} nameY={prop2} />
-      <TodoList newTodo={todo3} newTodo2="Going to supermarket" isComplete = {isComplete} />
+      <Navbar />
+      <div className="w-1/2 mx-auto my-10">
+        <TodoListApp />
+      </div>
     </div>
   );
 };
