@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { TestContext } from "./context/TestContext";
 import Navbar from "./navbar/Navbar";
 import TodoListApp from "./views/TodoListApp";
 
@@ -26,14 +28,26 @@ onDelete={handleDelete}
 /> */
 }
 
+// children
+
+// <Navbar/>
+
+// <Navbar>{children}</Navbar>
+
 const App = () => {
+
+const [testData, setTestData] = useState("Learning Context Api")
+const [name, setName] = useState("")
+
   return (
-    <div>
-      <Navbar />
-      <div className="w-1/2 mx-auto my-10">
-        <TodoListApp />
+    <TestContext value={{ testData, name, setTestData, setName }}>
+      <div>
+        <Navbar />
+        <div className="w-1/2 mx-auto my-10">
+          <TodoListApp />
+        </div>
       </div>
-    </div>
+    </TestContext>
   );
 };
 
