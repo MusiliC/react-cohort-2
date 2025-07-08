@@ -39,15 +39,17 @@ const App = () => {
 const [testData, setTestData] = useState("Learning Context Api")
 const [name, setName] = useState("")
 
+
+
   return (
-    <TestContext value={{ testData, name, setTestData, setName }}>
-      <div>
-        <Navbar />
+    <div>
+      <Navbar />
+      <TestContext value={{ testData, name, setTestData, setName }}>
         <div className="w-1/2 mx-auto my-10">
           <TodoListApp />
         </div>
-      </div>
-    </TestContext>
+      </TestContext>
+    </div>
   );
 };
 

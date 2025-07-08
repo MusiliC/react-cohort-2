@@ -1,12 +1,14 @@
 
-import { useContext } from "react";
-import { TestContext } from "../context/TestContext";
+import {  useTestContext } from "../context/TestContext";
 
 
 const TodoForm = ({ todoData, handleInputChange, handleFormSubmit, isEditing }) => {
 
 
-  const { setName, name } = useContext(TestContext);
+  // const { setName, name } = useContext(TestContext);
+
+ const { setName, name } = useTestContext();
+
 
   console.log("Logs");
   

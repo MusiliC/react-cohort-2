@@ -1,9 +1,13 @@
 
-import { TestContext } from "../context/TestContext";
+import { TestContext, useTestContext } from "../context/TestContext";
 
   const Navbar = () => {
     //   const { text, setText } = useContext(MyContext);
 
+     const {  name } = useTestContext();
+    console.log("Name from Navbar");
+    console.log(name);
+    
     
 
     return (
