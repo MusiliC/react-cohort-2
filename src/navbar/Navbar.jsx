@@ -1,4 +1,5 @@
 
+import { Link } from "react-router";
 import { TestContext, useTestContext } from "../context/TestContext";
 
   const Navbar = () => {
@@ -12,9 +13,10 @@ import { TestContext, useTestContext } from "../context/TestContext";
 
     return (
       <div className="bg-gray-800 text-white text-lg flex justify-center gap-5 p-4">
-        <p className="">Home</p>
-        <p className="">Todo</p>
-        <p className="">About</p>
+        <Link to="" className="">Home</Link>
+        <Link to="messages">Messages</Link>
+        <Link to="notifications" className="">Notifications</Link>
+      
 
       </div>
     );
